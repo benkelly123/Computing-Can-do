@@ -1,8 +1,5 @@
 /*CSS code */
 
-.nav.navbar.navbar-inverse.affix {
-    z-index: 1;
-}
-.well {
-  padding-top: 0px;
+.navbar-inverse {
+    z-index: 2;
 }
