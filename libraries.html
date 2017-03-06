@@ -7,7 +7,7 @@
 
     <!-- Latest compiled JavaScript -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-<link rel="stylesheet" src="css/styles.css">
+    <link rel="stylesheet" src="css/styles.css">
 <nav class="navbar navbar-inverse" data-spy="affix">
       <div class="container-fluid">
         <div class="navbar-header">
@@ -15,10 +15,9 @@
         </div>
       </div>
     </nav>
-
 <div class="well-lg">
 
-     <!DOCTYPE html>
+       <!DOCTYPE html>
 <html>
 <head>
   <meta charset="utf-8">
@@ -44,51 +43,26 @@
 <body>
   
   <div id="titlearea">
-    <h2>File Handling</h2>
+    <h2>The Use of Libraries</h2>
   </div>
-  <div id="contentarea"><div class="cell markdown-cell"><h2 id="opening-the-file">Opening the File</h2>
-<p>In python a file can be opened with the statement <code>open('file name', 'condition')</code>. Python needs a <em>condition</em> in order to utilise the file.</p>
-<table>
-<thead>
-<tr>
-<th>Condition</th>
-<th>Use</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>'r'</td>
-<td>Read the file, the file cannot be edited</td>
-</tr>
-<tr>
-<td>'w'</td>
-<td>Write to the file, this will overwrite any other information.</td>
-</tr>
-<tr>
-<td>'a'</td>
-<td>Append to the file, any information added will be added to the end of the file.</td>
-</tr>
-</tbody>
-</table>
-<h2 id="examples">Examples</h2>
-</div><div class="cell code-cell"><div class="ace-chrome"><div class="ace_static_highlight ace_show_gutter" style="counter-reset:ace_line 0"><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_comment"># Opening the file for reading</span>
+  <div id="contentarea"><div class="cell markdown-cell"><h1 id="the-python-standard-library">The Python Standard Library</h1>
+<p>The python standard libarary contains many commonly used functions and procedures. this includes the <code>print()</code> and <code>input()</code> statements. However there is often a need to import an additional <strong>external library</strong>, these can either come 'pre-installed' with python, downloaded, or be your own libraries that you have created.</p>
+<h1 id="importing-an-external-library">Importing an External Library</h1>
+<p>To import an extermal library the <code>import</code> keyword must be used.</p>
+</div><div class="cell code-cell"><div class="ace-chrome"><div class="ace_static_highlight ace_show_gutter" style="counter-reset:ace_line 0"><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_comment">#Import example</span>
 </div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>
-</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_identifier">file</span> <span class="ace_keyword ace_operator">=</span> <span class="ace_support ace_function">open</span><span class="ace_paren ace_lparen">(</span><span class="ace_string">'file.txt'</span>, <span class="ace_string">'r'</span><span class="ace_paren ace_rparen">)</span>
-</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_identifier">line</span> <span class="ace_keyword ace_operator">=</span> <span class="ace_identifier">file</span>.<span class="ace_identifier">readline</span><span class="ace_paren ace_lparen">(</span><span class="ace_paren ace_rparen">)</span>
-</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_keyword">print</span><span class="ace_paren ace_lparen">(</span><span class="ace_identifier">line</span><span class="ace_paren ace_rparen">)</span>
-</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_keyword ace_operator">&gt;&gt;&gt;</span> <span class="ace_string">'Hello'</span>
-</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_identifier">file</span>.<span class="ace_identifier">close</span><span class="ace_paren ace_lparen">(</span><span class="ace_paren ace_rparen">)</span> <span class="ace_comment">#A file MUST be closed after use</span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_keyword">import</span> <span class="ace_identifier">math</span> <span class="ace_comment">#This imports the 'math' library</span>
 </div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>
-</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_comment"># If you are reading/writing to a binary file, a 'b' must be added after the 'w', 'r' or 'a'.</span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_keyword">from</span> <span class="ace_identifier">math</span> <span class="ace_keyword">import</span> <span class="ace_keyword ace_operator">*</span> <span class="ace_comment">#This also imports the math library</span>
 </div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>
-</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_identifier">file</span> <span class="ace_keyword ace_operator">=</span> <span class="ace_support ace_function">open</span><span class="ace_paren ace_lparen">(</span><span class="ace_string">"binaryfile"</span>, <span class="ace_string">"rb"</span><span class="ace_paren ace_rparen">)</span>
-</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_identifier">bytes_read</span> <span class="ace_keyword ace_operator">=</span> <span class="ace_identifier">file</span>.<span class="ace_identifier">read</span><span class="ace_paren ace_lparen">(</span><span class="ace_paren ace_rparen">)</span>
-</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_keyword">for</span> <span class="ace_identifier">b</span> <span class="ace_keyword">in</span> <span class="ace_identifier">bytes_read</span>:
-</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>    <span class="ace_identifier">process_byte</span><span class="ace_paren ace_lparen">(</span><span class="ace_identifier">b</span><span class="ace_paren ace_rparen">)</span> <span class="ace_comment"># In place of a function which would process the bytes</span>
-</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_identifier">file</span>.<span class="ace_identifier">close</span><span class="ace_paren ace_lparen">(</span><span class="ace_paren ace_rparen">)</span>
-</div></div></div></div></div>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_keyword">from</span> <span class="ace_identifier">math</span> <span class="ace_keyword">import</span> <span class="ace_identifier">fact</span> <span class="ace_comment">#Imports the fact function from the math library</span>
+</div></div></div></div><div class="cell markdown-cell"><h1 id="useful-libraries">Useful Libraries</h1>
+<ul>
+<li>For maths, <code>math</code> and <code>numpy</code> are useful.</li><li>For GUI programming <code>Tkinter</code> can be useful</li></ul>
+<p><a href="https://pythontips.com/2013/07/30/20-python-libraries-you-cant-live-without/">Here are some other useful libraries</a></p>
+</div></div>
   <script></script>
 </body>
-</html>  
+</html>
 
 </div>
